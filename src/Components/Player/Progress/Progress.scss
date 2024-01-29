@@ -1,0 +1,44 @@
+.player-progress {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+
+    .progress-bar {
+        position: absolute;
+        bottom: 10px;
+        right: 8px;
+        width: 70%;
+        height: 2px;
+        background-color: rgb(44, 44, 44);        
+    
+        @media (min-height: 700px) {
+            bottom: 18px;            
+        }
+    }
+
+    .progress-done {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%; //
+        height: 2px;
+        background-color:  rgb(202, 203, 204);
+    }
+
+    .progress-button {
+        position: absolute;
+        top: -4px;
+        left: calc(40% - 2px); //
+        width: 10px;
+        height: 10px;
+        background-color: rgb(202, 203, 204);
+        border-radius: 100%;
+
+        &:hover {
+            transform: scale(1.4);
+            cursor: pointer;
+        }
+    }
+
+}

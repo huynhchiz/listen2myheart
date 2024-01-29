@@ -1,0 +1,58 @@
+.player-disk {
+    position: absolute;
+    z-index: 1;
+    left: 6%;
+    top: -32px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background-color: #4b4b4b;
+
+    @media (min-width: 389px) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .disk-middle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: rgb(202, 203, 204);
+    }
+
+    .disk-shadow {
+        position: absolute;
+        width: 28px;
+        height: 1px;
+        background-color: rgb(202, 203, 204);
+        left: 54%;
+        top: 28%;
+        transform: rotate(313deg);
+    }
+
+    .disk-shadow-2 {
+        position: absolute;
+        width: 12px;
+        height: 1px;
+        background-color: rgb(202, 203, 204);
+        left: 29%;
+        top: 64%;
+        transform: rotate(313deg);
+    }
+}
+
+.player-disk-spin {
+    animation: disk-spin 2s 1s linear infinite;
+}
+
+@keyframes disk-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+

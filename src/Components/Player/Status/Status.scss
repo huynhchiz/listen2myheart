@@ -1,0 +1,73 @@
+.player-status {
+    position: relative;
+
+    .status-active {
+        width: 42px;
+        height: 42px;
+        border-radius: 4px;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        position: relative;
+        
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            cursor: pointer;
+        }
+
+        .ra-active-item {
+            position: absolute;
+            top: 33%;
+            left: 23%;
+        }
+
+        .ro-active-item {
+            position: absolute;
+            top: 33%;
+            left: 23%;
+        }
+        
+        .r-active-item {
+            position: absolute;
+            top: 31%;
+            left: 12%;
+        }
+    }
+
+    .status-list {
+        // display: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 41px;
+        width: 180px;
+        height: 42px;
+        align-items: center;
+        z-index: 5;
+        background-color: rgb(226, 184, 128);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        span {
+            // display: none;
+            width: 42px;
+            height: 42px;
+            margin-top: 24px;
+            margin-left: 16px;
+            animation: show-status-list 1s ease forwards;
+            cursor: pointer;
+            &:hover > .status-list-item{
+                opacity: 0.4;
+            }
+        }
+    }
+
+    @keyframes show-status-list {
+        from {
+            opacity: 0;
+            transform: translateX(-20%);
+        }
+        to {
+            opacity: 1;
+            transform: 0;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.player {
+
+    .player-container {
+        width: 100%;
+
+        // player-top
+        .player-top {
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            animation: show-player-top ease 1s forwards;
+
+            .player-top-container {
+                width: 90%;
+                height: 9vh;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                background-color: #c7ac75;
+                padding-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                position: relative;
+
+                .player-singer {
+                    margin-top: 4px;
+                    font-size: 20px;
+                    color: red;
+                }
+
+                .player-song-name {
+                    margin-top: 2px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .player-top-hide {
+            animation: hide-player-top ease 1s forwards;
+        }
+
+        @keyframes show-player-top {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: 0;
+            }
+        }
+        
+        @keyframes hide-player-top {
+            from {
+                opacity: 1;
+                transform: 0;
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+
+
+        // player-main
+        .player-main {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+
+            audio {
+                position: absolute;
+                top: 0;
+            }
+
+            .player-main-container {
+                width: 96%;
+                height: 11vh;
+                border-radius: 5px;
+                background-color: #f5aa3f;
+                position: relative;
+
+                .player-main-buttons {
+                    position: absolute;
+                    width: 30vw;
+                    max-width: 160px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 18%;
+
+                    .player-status-button {
+                        position: absolute;
+                        left: -55px;
+                    }
+                }
+            }
+
+
+            
+        }
+    }
+
+
+}

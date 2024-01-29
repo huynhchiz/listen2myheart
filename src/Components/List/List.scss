@@ -1,0 +1,57 @@
+.list {
+
+    .list-container {
+        padding: 8px;
+
+        .song-item {
+            margin-bottom: 4px;
+            font-size: 16px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            padding: 2px;
+            padding-left: 4px;
+            
+            &:hover {
+                border-color: rgb(121, 120, 120);
+            }
+            cursor: pointer;
+
+            & + .song-item {
+                margin-top: 8px;
+            }
+
+            .song-detail {
+                display: flex;
+            }
+
+            .song-id {
+                font-size: 20px;
+                color: #f5aa3f;
+                margin-right: 8px;
+                font-weight: 600;
+            }
+
+            .song-name {
+                margin-right: 24px;
+                color: rgb(228, 228, 228);
+                font-weight: 600;
+            }
+
+            .song-singer {
+                color: #d7db8f;
+            }
+        }
+
+        .song-active {
+            background-color: rgb(121, 120, 120);
+            position: relative;
+
+            .audio-song-active {
+                position: absolute;
+                top: 45%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+        }
+    }
+}
