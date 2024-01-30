@@ -9,12 +9,14 @@ const Provider = ({ children }) => {
     const audioRef = useRef()
 
     useEffect(() => {
-        let audios = document.querySelectorAll('audio')
-        if (audios && audios.length > 0) {
-            audios.forEach(audio => audio.pause())
-        }
+        if(activeSongId) {
+            let audios = document.querySelectorAll('audio')
+            if (audios && audios.length > 0) {
+                audios.forEach(audio => audio.pause())
+            }
 
-        handlePlay()
+            handlePlay()
+    }
     }, [activeSongId])
 
     const handlePlay = () => {
